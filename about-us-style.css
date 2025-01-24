@@ -1,0 +1,40 @@
+/* Basic style for a coming soon page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eae9e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+}
+
+.coming-soon {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.countdown {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+}
