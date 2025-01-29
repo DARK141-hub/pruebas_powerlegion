@@ -1,98 +1,239 @@
 /* Estilos generales para el cuerpo */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Estilos para la sección del formulario */
-  .form {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px;
-  }
-  
-  /* Estilos para el título del formulario */
-  .form h2 {
-    margin-top: 0;
-    color: #333333;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para las etiquetas */
-  .form label {
-    display: block;
-    margin-bottom: 6px;
-    color: #666666;
-    font-weight: bold;
-  }
-  
-  /* Estilos para los campos de entrada */
-  .form input[type="text"],
-  .form input[type="tel"],
-  .form input[type="email"],
-  .form input[type="date"],
-  .form input[type="time"],
-  .form select,
-  .form textarea {
-    width: calc(100% - 20px); /* Ajuste para margen interno */
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #333333;
-    background-color: #ffffff;
-  }
-  
-  /* Estilos para el área de texto */
-  .form textarea {
-    height: 100px;
-    resize: vertical; /* Permite cambiar el tamaño vertical del textarea */
-  }
-  
-  /* Estilos para el botón de envío */
-  .form button[type="submit"] {
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-  }
-  
-  .form button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos para los mensajes de respuesta */
-  #respuesta {
-    margin-top: 15px;
-    font-size: 16px;
-    color: #333333;
-  }
-  
-  .fail {
-    color: #ff0000;
-  }
-  
-  .send {
-    color: #007BFF;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4; /* Light background */
+  color: #333; /* Dark text */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  background-color: #ffd700; /* Gold */
+  width: 100%; /* Para ocupar todo el ancho */
+  padding: 10px 0; /* Ajuste de padding para altura consistente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header hr{
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 0px;
+}
+
+/* Navegación de Información */
+.info-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  padding: 0 20px;
+  background-color: #000000; /* Black */
+  color: #ffd700; /* Gold */
+  margin: 0;
+}
+
+.info-nav p {
+  transition: transform 2s ease;
+  margin: 0;
+}
+
+.info-nav p:hover {
+  color: #ffffff;
+}
+
+.info-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 2.5px ;
+  padding: 0;
+}
+
+.info-nav p, .info-nav a {
+  margin: 0;
+  color: #ffd700; /* Gold */
+  text-decoration: none;
+}
+
+/* Navegación Principal */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Ajuste de padding para altura consistente */
+  background-color: #000000; /* Black */
+}
+
+.main-nav .nav-links {
+  display: flex;
+  gap: 65px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffd700; /* Gold */
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 2.1s ease, transform 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #ffd700; /* Gold */
+  color: #000000; /* Black */
+  transform: scale(1.1);
+}
+
+.main-nav .logo {
+  height: auto;
+  width: 100px;
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Estilos para la sección del formulario */
+.form {
+  background-color: #ffd700; /* Cambiado a dorado */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+}
+
+/* Estilos para el título del formulario */
+.form h2 {
+  margin-top: 0;
+  color: #000000; /* Cambiado a negro */
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas */
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  color: #000000; /* Cambiado a negro */
+  font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="time"],
+.form select,
+.form textarea {
+  width: calc(100% - 20px); /* Ajuste para margen interno */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #000000; /* Cambiado a negro */
+  background-color: #ffffff;
+}
+
+/* Estilos para el área de texto */
+.form textarea {
+  height: 100px;
+  resize: vertical; /* Permite cambiar el tamaño vertical del textarea */
+}
+
+/* Estilos para el botón de envío */
+.form button[type="submit"] {
+  background-color: #000000; /* Cambiado a negro */
+  color: #ffd700; /* Cambiado a dorado */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 25%;
+  transition: background-color 0.9s ease, color 0.9s ease, transform 0.9s ease;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #333333; /* Cambiado a oscuro */
+  color: #f4d529; /* Cambiado a dorado */
+}
+
+/* Estilos para los mensajes de respuesta */
+#respuesta {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.fail {
+  color: #ff0000;
+}
+
+.send {
+  color: #007BFF;
+}
+
+footer {
+  background-color: #000000; /* Black */
+  color: #ffd700; /* Gold */
+  padding: 20px 0; /* Ajuste de padding para altura consistente */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ffd700; /* Línea decorativa dorada */
+  margin: 10px 0;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-sections section {
+  margin: 10px;
+}
+
+.footer-sections h2 {
+  margin-bottom: 10px;
+}
+
+.footer-sections ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-sections a {
+  color: #ffd700; /* Gold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-sections a:hover {
+  color: #ffffff; /* White */
+}
+

@@ -4,38 +4,122 @@
   <meta charset="UTF-8">
   <title>Formulario de Contacto</title>
   <link rel="stylesheet" href="contacto-style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="contacto-sistema.js"></script>
 </head>
 <body>
-  <section class="form">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
 
-      <label for="telefono">Número de Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" required>
+  <header>
+    <nav class="info-nav">
+        <p><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
+        <ul>
+            <li><p><i class="fa-solid fa-phone"></i> (832)722-7912</p></li>
+            <li><p><i class="fa-solid fa-phone"></i> (281)300-4219</p></li>
+        </ul>
+        <ul>
+            <li><p><i class="fa-solid fa-calendar-days"></i> Monday - Sunday</p></li>
+            <li><p><i class="fa-solid fa-clock"></i> 9:00am - 8:00pm </p></li>
+        </ul>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-x"></i></a></li>
+            <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+    </nav>
 
-      <label for="email">Correo Electrónico:</label>
-      <input type="email" id="email" name="email" required>
+    <hr>
 
-      <label for="servicio">Servicio:</label>
-      <select id="servicio" name="servicio" required>
-        <option value="">Seleccione un servicio</option>
-        <option value="Weatherproof Inlets">Weatherproof Inlets</option>
-        <option value="Soft Starters Devices">Soft Starters Devices</option>
-        <option value="Hard Start Devices">Hard Start Devices</option>
-        <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
-        <option value="Lawn Bed Maintenance">Lawn Bed Maintenance</option>
-        <option value="Spring Maintenance">Spring Maintenance</option>
-      </select>
+    <nav class="main-nav">
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <img src="imagenes/logo.jpg" class="logo" alt="Power Legion Enterprise Logo">
+            <a href="index.html#servicios" onclick="scrollToServices()">Services</a>
+            <a href="contacto.html">Contact</a>
+        </div>
+    </nav>
+</header>
 
-      <label for="mensaje">Mensaje Adicional (opcional):</label>
-      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
 
-      <button type="submit" id="submit">Enviar</button>
-    </form>
-    <p id="respuesta"></p>
-  </section>
-  <script src="contacto-sistema.js"></script>
+<section class="form">
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+    <label for="nombre">Name:</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Insert your name">
+
+    <label for="telefono">Phone Number:</label>
+    <input type="tel" id="telefono" name="telefono" required placeholder="Insert your phone number">
+
+    <label for="email">Mail:</label>
+    <input type="email" id="email" name="email" required placeholder="Insert your email">
+
+    <label for="servicio">Service:</label>
+    <select id="servicio" name="servicio" required>
+      <option value="">Select a service</option>
+      <option value="Weatherproof Inlets">Weatherproof Inlets</option>
+      <option value="Soft Starters Devices">Soft Starters Devices</option>
+      <option value="Hard Start Devices">Hard Start Devices</option>
+      <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
+      <option value="Interior Remodeling">Interior Remodeling</option>
+      <option value="Concrete Services">Concrete Services</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="mensaje">Additional Message (optional):</label>
+    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+    <button type="submit" id="submit">Send</button>
+  </form>
+  <p id="respuesta"></p>
+</section>
+
+
+  <footer data-aos="fade-up" data-aos-duration="1500">
+    <div class="footer-sections">
+        <section class="footer-info">
+            <h2>Information</h2>
+            <hr>
+            <p>Power Legion Enterprise, delivering excellence since [year].</p>
+        </section>
+        
+        <section class="footer-links">
+            <h2>Quick Links</h2>
+            <hr>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </section>
+        
+        <section class="footer-services">
+            <h2>Our Services</h2>
+            <hr>
+            <ul>
+                <li><a href="#">Weatherproof Inlets</a></li>
+                <li><a href="#">Soft Starters Devices</a></li>
+                <li><a href="#">Hard Start Devices</a></li>
+                <li><a href="#">Natural Gas Hook-up</a></li>
+                <li><a href="#">Lawn Bed Maintenance</a></li>
+                <li><a href="#">Spring Maintenance</a></li>
+            </ul>
+        </section>
+        
+        <section class="footer-support">
+            <h2>Support</h2>
+            <hr>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Ticket Support</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+        </section>
+    </div>
+</footer>
 </body>
 </html>
