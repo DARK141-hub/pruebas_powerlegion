@@ -93,6 +93,10 @@ header {
     display: none;
 }
 
+.close-menu {
+    display: none;
+}
+
 /* Banner Styles */
 .banner {
     position: relative;
@@ -274,6 +278,81 @@ header {
     margin-top: 16px;
 }
 
+/* Estilos para el Modal */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Centrar el Modal */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para el Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    padding: 20px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Botón de enviar */
+form button[type="submit"] {
+    background-color: #000;
+    color: #ffd700;
+    padding: 10px 15px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Botón de cerrar */
+#close-modal {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+}
+
+#close-modal:hover {
+    background-color: darkred;
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #000000; /* Black */
@@ -350,6 +429,18 @@ footer hr {
         cursor: pointer;
         color: #ffd700;
     }
+    .close-menu {
+        font-size: 30px;
+        color: #ffd700;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: none; /* Oculta el botón por defecto */
+    }
+        .nav-links.active .close-menu {
+            display: block;
+        }
 
     /* 🔹 Menú desplegable */
     .nav-links {
@@ -447,6 +538,30 @@ footer hr {
         width: 100%;
         margin: 15px 0;
     }
+    dialog {
+        width: 85%;
+        max-width: 450px;
+    }
+}
+/* 📌 Pantallas menores a 768px */
+@media (max-width: 768px) {
+    dialog {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #close-modal {
+        width: 100%;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+    }
 }
 
 /* 📌 Pantallas menores a 576px */
@@ -466,6 +581,14 @@ footer hr {
         font-size: 28px;
         cursor: pointer;
         color: #ffd700;
+    }
+    .close-menu {
+        font-size: 28px;
+        color: #ffd700;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
     /* 🔹 Ocultar menú normal */
@@ -501,6 +624,24 @@ footer hr {
     margin-right: -27px;
     margin-bottom: 5px;
 }
+dialog {
+    width: 95%;
+    max-width: 380px;
+}
+
+form input,
+form select,
+form textarea {
+    font-size: 14px;
+    padding: 8px;
+}
+
+button {
+    font-size: 14px;
+    padding: 10px;
+}
+
+
 /* 🔹 Ocultar header en menos de 500px */
 @media (max-width: 500px) {
     header {
@@ -593,6 +734,32 @@ footer hr {
     
         .banner-text-info h3 {
             font-size: 14px;
+        }
+        dialog {
+            width: 98%;
+            max-width: 340px;
+            padding: 15px;
+        }
+    
+        form h2 {
+            font-size: 18px;
+        }
+    
+        form input,
+        form select,
+        form textarea {
+            font-size: 13px;
+            padding: 6px;
+        }
+    
+        button {
+            font-size: 14px;
+            padding: 8px;
+        }
+    
+        .buttons {
+            flex-direction: column;
+            gap: 5px;
         }
 }
 

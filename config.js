@@ -1,7 +1,6 @@
 // config.js
 const config = {
-    telefonoWhatsApp: "+528682971178"
+    telefonoWhatsApp: "+528683739341"
   };
   
   export default config;
-  
