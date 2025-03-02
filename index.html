@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Power Legion Enterprise</title>
     <meta name="description" content="Welcome to Power Legion Enterprise, your source for top-tier services.">
-    <link rel="stylesheet" href="styles.css"> <!-- Conectar tu CSS externo -->
+    <meta name="keywords" content="Power Legion, Enterprise, Services, Generators, Houston">
+    <meta name="author" content="Power Legion Enterprise">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
 </head>
 <body>
     <!-- Encabezado principal -->
@@ -43,8 +46,10 @@
                 <button class="close-menu" id="close-menu">&times;</button>
                 <a href="index.html">Home</a>
                 <a href="about-us.html">About Us</a>
-                <img src="imagenes/logo.jpg" class="logo" alt="Logo">
-                <a href="javascript:void(0);" onclick="scrollToServices()">Services</a>
+                <img src="imagenes/logo.jpg" class="logo" alt="Electrician logo">
+                <a href="#servicios" onclick="event.preventDefault(); 
+                document.getElementById('servicios').scrollIntoView({behavior: 'smooth', block: 'center'});
+                 setTimeout(() => window.scrollBy(0, 60), 800);">Services</a>
                 <a id="open-modal" class="open-modal-btn">Contact</a>
             </div>
         </nav>
@@ -52,7 +57,7 @@
 
     <!-- Sección de banner -->
     <section class="banner">
-        <img src="imagenes/banner1.jpg" alt="Banner showing Power Legion Enterprise services and offerings">
+        <img src="imagenes/banner1.jpg" alt="Banner for Power Legion Enterprise">
         <div class="banner-content">
             <div class="banner-text-info">
                 <h1>Transforming spaces with innovation and sustainability</h1>
@@ -67,31 +72,29 @@
                     mind and continuous power. Whether for emergencies <br>
                     or backup needs, we deliver solutions you can count on <br>
                 </h3>
-                <button class="animate__animated animate__fadeIn animate__slower">Get Started</button>
             </div>
         </div>
     </section>
 
-
     <section id="servicios" class="cards" data-aos="fade-down" data-aos-duration="1600" data-aos-delay="200">
         <div class="card">
-            <img src="imagenes/weatherproof.jpg" alt="Weatherproof" class="card-image">
+            <img src="imagenes/weatherproof.jpg" alt="Weatherproof Inlets" class="card-image">
             <div class="card-content">
                 <h2>Weatherproof Inlets</h2>
-                <p>Descripción</p>
+                <p>Safe, weatherproof power for RVs, boats, and generators—plug in with confidence!</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Weatherproof Inlets';">Contact us</button>
             </div>
         </div>
         <div class="card">
-            <img src="imagenes/soft_starters1.jpg" alt="Soft Starters" class="card-image">
+            <img src="imagenes/soft_starters1.jpg" alt="Soft Starters Devices" class="card-image">
             <div class="card-content">
                 <h2>Soft Starters Devices</h2>
-                <p>Descripción</p>
+                <p>Protect your motors and save energy with smooth, stress-free startups.</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Soft Starters Devices';">Contact us</button>
             </div>
         </div>
         <div class="card">
-            <img src="imagenes/hard-start1.jpg" alt="Hard Start" class="card-image">
+            <img src="imagenes/hard-start1.jpg" alt="Hard Start Devices" class="card-image">
             <div class="card-content">
                 <h2>Hard Start Devices</h2>
                 <p>Descripción</p>
@@ -102,72 +105,71 @@
             <img src="imagenes/natural-gas-hookup.jpg" alt="Natural Gas Hook-up" class="card-image">
             <div class="card-content">
                 <h2>Natural Gas Hook-up</h2>
-                <p>Descripción</p>
+                <p>Natural gas hook up to connect your portable generator
+                and power it from the city.</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Natural Gas Hook-up';">Contact us</button>
             </div>
         </div>
         <div class="card">
             <img src="imagenes/interiores.jpg" alt="Interior Remodeling" class="card-image">
             <div class="card-content">
-            <h2>Interior Remodeling</h2>
-            <p>Description</p>
-            <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Interior Remodeling';">Contact us</button>
-        </div>
+                <h2>Interior Remodeling</h2>
+                <p>Transform your space with stylish, high-quality renovations tailored to you.</p>
+                <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Interior Remodeling';">Contact us</button>
+            </div>
         </div>
         <div class="card">
             <img src="imagenes/concreto.jpg" alt="Concrete Services" class="card-image">
             <div class="card-content">
-            <h2>Concrete Services</h2>
-            <p>Description</p>
-            <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Concrete Services';">Contact us</button>
+                <h2>Concrete Services</h2>
+                <p>We make concrete for your backyard. For the foundation
+                    of your house or for your driveway.</p>
+                <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Concrete Services';">Contact us</button>
             </div>
         </div>
-        </section>
+    </section>
 
+    <!-- Modal con el formulario -->
+    <dialog id="modal-form">
+        <form id="contact-form" method="dialog">
+            <span class="close-btn" onclick="document.getElementById('modal-form').close()">&times;</span>
+            <h2 class="contact-title">Contact Us</h2>
 
-<!-- Modal con el formulario -->
-<dialog id="modal-form">
-    <form id="contact-form" method="dialog">
-        <h2>Contact Us</h2>
+            <label for="nombre">Name:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Insert your name">
 
-        <label for="nombre">Name:</label>
-        <input type="text" id="nombre" name="nombre" required placeholder="Insert your name">
+            <label for="telefono">Phone Number:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Insert your phone number">
 
-        <label for="telefono">Phone Number:</label>
-        <input type="tel" id="telefono" name="telefono" required placeholder="Insert your phone number">
+            <label for="email">Mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Insert your email">
 
-        <label for="email">Mail:</label>
-        <input type="email" id="email" name="email" required placeholder="Insert your email">
+            <label for="servicio">Service:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Select a service</option>
+                <option value="Weatherproof Inlets">Weatherproof Inlets</option>
+                <option value="Soft Starters Devices">Soft Starters Devices</option>
+                <option value="Hard Start Devices">Hard Start Devices</option>
+                <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
+                <option value="Interior Remodeling">Interior Remodeling</option>
+                <option value="Concrete Services">Concrete Services</option>
+                <option value="Other">Other</option>
+            </select>
 
-        <label for="servicio">Service:</label>
-        <select id="servicio" name="servicio" required>
-            <option value="">Select a service</option>
-            <option value="Weatherproof Inlets">Weatherproof Inlets</option>
-            <option value="Soft Starters Devices">Soft Starters Devices</option>
-            <option value="Hard Start Devices">Hard Start Devices</option>
-            <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
-            <option value="Interior Remodeling">Interior Remodeling</option>
-            <option value="Concrete Services">Concrete Services</option>
-            <option value="Other">Other</option>
-        </select>
+            <label for="mensaje">Additional Message (optional):</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
 
-        <label for="mensaje">Additional Message (optional):</label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
-
-        <div class="buttons">
-            <button type="submit" id="submit">Send</button>
-            <button type="button" id="close-modal">Close</button>
-            <p id="respuesta"></p>
-        </div>
-    </form>
-</dialog>
-
+            <div class="buttons">
+                <button id="dialog-button" type="submit" id="submit">Send</button>
+                <p id="respuesta"></p>
+            </div>
+        </form>
+    </dialog>
 
     <!-- Botón flotante de WhatsApp -->
     <a id="whatsapp-float" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp whatsapp-icon"></i>
     </a>
-    
 
     <!-- Pie de página -->
     <footer data-aos="fade-up" data-aos-duration="1500">
@@ -184,7 +186,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="about-us.html">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </section>
@@ -207,17 +209,13 @@
                 <hr>
                 <ul>
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Ticket Support</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Forum</a></li>
                 </ul>
             </section>
         </div>
-        <a href="/download-excel" id="download-excel" style="display: none;">Descargar Excel</a>
     </footer>
     <script>
         AOS.init();
     </script>    
-        <script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>

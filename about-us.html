@@ -3,17 +3,256 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="about-us-style.css">
+        <title>About Us - Power Legion Enterprise</title>
+        <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
+        <link rel="stylesheet" href="styles_aboutus.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        
+        <!-- Facebook Comments Plugin -->
+        <script>
+            window.fbAsyncInit = function() {
+              FB.init({
+                appId      : 'TU_APP_ID',
+                xfbml      : true,
+                version    : 'v19.0'
+              });
+            };
+          
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "https://connect.facebook.net/es_LA/sdk.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+          <!-- End Facebook Comments Plugin -->
     </head>
     <body>
-        <section class="coming-soon">
-        <h1>We are ready coming soon</h1>
-        <br>
-        <h1>Error 404</h1>
-    </section>
-        <script src="" async defer></script>
+        <header>
+            <nav class="info-nav">
+                <p><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
+                <ul>
+                    <li><p><i class="fa-solid fa-phone"></i> (832)722-7912</p></li>
+                    <li><p><i class="fa-solid fa-phone"></i> (281)300-4219</p></li>
+                </ul>
+                <ul>
+                    <li><p><i class="fa-solid fa-calendar-days"></i> Monday - Sunday</p></li>
+                    <li><p><i class="fa-solid fa-clock"></i> 9:00am - 8:00pm </p></li>
+                </ul>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/"><i class="fab fa-x"></i></a></li>
+                    <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </nav>
+    
+            <hr>
+    
+            <nav class="main-nav">
+                <button class="hamburger-menu">&#9776;</button>
+                <div class="nav-links">
+                    <button class="close-menu" id="close-menu">&times;</button>
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <img src="imagenes/logo.jpg" class="logo" alt="Logo">
+                    <a href="javascript:void(0);" onclick="scrollToServices()">Services</a>
+                    <a id="open-modal" class="open-modal-btn">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="blog-main">
+            <!-- Featured Content Section -->
+            <section id="featured" class="featured-section">
+                <h2 class="section-title">Featured Content</h2>
+                <div class="featured-video">
+                    <iframe width="860" height="515" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+<!-- Photo Gallery Carousel -->
+<section id="gallery" class="gallery-section">
+    <h2 class="section-title">Our Work Gallery</h2>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/cableado.jpg" alt="Work 1">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/BuildWorking.jpg" alt="Work 2">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/TvInterior.jpg" alt="Work 3">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/WorkingOn2.jpg" alt="Work 4">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/interioresdesing.jpg" alt="Work 5">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/Volt.jpg" alt="Work 6">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/weatherproof.jpg" alt="Work 7">
+            </div>
+            <div class="carousel-slide" data-aos="fade-up">
+                <img src="imagenes/lawn-bed.png" alt="Work 8">
+            </div>
+        </div>
+        <button class="carousel-button prev">&lt;</button>
+        <button class="carousel-button next">&gt;</button>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+
+<!-- Latest News Section -->
+<section id="latest-news" class="news-section">
+    <h2 class="section-title">Satisfied Customers</h2>
+    <div class="news-grid">
+        <article class="news-card">
+            <img src="imagenes/Clientes1.jpg" alt="Happy Customer 1">
+            <div class="news-content">
+                <h3>Smiles All Around!</h3>
+                <p>"Amazing experience, highly recommended!" Another happy customer thrilled with the service and attention to detail.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="imagenes/Clientes2.jpg" alt="Happy Customer 2">
+            <div class="news-content">
+                <h3>Happiness Guaranteed</h3>
+                <p>"Everything was perfect, we couldn’t be happier!" We love seeing our customers smiling with satisfaction.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="imagenes/Clientes3.jpg" alt="Happy Customer 3">
+            <div class="news-content">
+                <h3>Trust and Satisfaction</h3>
+                <p>The best part of our work? Seeing our customers happy and confident in their choice!</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="imagenes/Clientes4.jpg" alt="Happy Customer 4">
+            <div class="news-content">
+                <h3>Simply Outstanding!</h3>
+                <p>"The best service we've ever had!" Another happy customer joining our growing family of satisfied clients.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="imagenes/Clientes5.jpg" alt="Happy Customer 5">
+            <div class="news-content">
+                <h3>Five-Star Experience</h3>
+                <p>"Highly recommended, excellent service!" We take pride in seeing the satisfaction on every customer’s face.</p>
+            </div>
+        </article>
+        <article class="news-card">
+            <img src="imagenes/Clientes6.jpeg" alt="Happy Customer 6">
+            <div class="news-content">
+                <h3>Happy Customers, Our Greatest Reward!</h3>
+                <p>Our mission is simple: to make every customer feel special and completely satisfied with our service.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+            <!-- About Us Section -->
+            <section id="about" class="about-section">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>About Us</h2>
+                        <p>
+                            Seven years ago, we started making electrical plugs for homes across
+                             Texas.
+                            We assembled the plugs ourselves, purchasing the parts at 
+                            Home Depot and building the enclosures. <br>
+                            
+                            It all started with three close friends who came together as a way to spend time with each other while helping people avoid losing electricity.
+                            Time flew by because we enjoyed what we did so much.
+                            Over time, our customers were consistently satisfied, and many began asking if we could handle other types of jobs.
+
+                            Eventually, we realized: why say no when we could help them solve any kind of problem?
+                            We had the solution, after all.
+                            And so, little by little, we grew. My friends and I began to take on different responsibilities within the company.
+
+                            Though we were no longer working side by side every day, communication remained essential to keep growing steadily.
+                            This separation allowed us to expand, but staying connected was the key to our continued progress.
+                            <br>
+                        </p>
+                        <br>
+                        <p>At Power Legion Enterprise, we believe in:</p>
+                        <ul>
+                            <li>Quality Service</li>
+                            <li>Customer Satisfaction</li>
+                            <li>Professional Excellence</li>
+                            <li>Competitive Pricing</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+                        <!-- Comments section -->
+                        <div class="fb-comments" 
+                        data-href="https://www.facebook.com/darkart141" 
+                        data-width="100%" 
+                        data-numposts="5">
+                   </div>
+        </main>
+
+          <!-- Pie de página -->
+    <footer data-aos="fade-up" data-aos-duration="1500">
+        <div class="footer-sections">
+            <section class="footer-info">
+                <h2>Information</h2>
+                <hr>
+                <p>Power Legion Enterprise, delivering excellence since [year].</p>
+            </section>
+            
+            <section class="footer-links">
+                <h2>Quick Links</h2>
+                <hr>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="about-us.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </section>
+            
+            <section class="footer-services">
+                <h2>Our Services</h2>
+                <hr>
+                <ul>
+                    <li><a href="#">Weatherproof Inlets</a></li>
+                    <li><a href="#">Soft Starters Devices</a></li>
+                    <li><a href="#">Hard Start Devices</a></li>
+                    <li><a href="#">Natural Gas Hook-up</a></li>
+                    <li><a href="#">Lawn Bed Maintenance</a></li>
+                    <li><a href="#">Spring Maintenance</a></li>
+                </ul>
+            </section>
+            
+            <section class="footer-support">
+                <h2>Support</h2>
+                <hr>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
+<script src="AboutUsJS.js"></script>
     </body>
 </html>

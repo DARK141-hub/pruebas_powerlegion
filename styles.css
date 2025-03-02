@@ -15,7 +15,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
-
 .info-nav {
     display: flex;
     justify-content: space-between;
@@ -26,27 +25,22 @@ header {
     color: #ffd700; /* Gold */
 
 }
-
 .info-nav p{
-    transition: transform 2s ease;
+    transition: transform 2s ease; /* 2 segundos es muy largo para una transición */
 }
-
 .info-nav p:hover {
     color: #ffffff;
 }
-
 .info-nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
 }
-
 .info-nav p, .info-nav a {
     margin: 0;
     color: #ffd700; /* Gold */
     text-decoration: none;
 }
-
 .main-nav {
     display: flex;
     justify-content: center;
@@ -54,12 +48,10 @@ header {
     padding: 10px 10px;
     background-color: #000000; /* Black */
 }
-
 .main-nav .nav-links {
     display: flex;
     gap: 65px;
 }
-
 .main-nav a {
     text-decoration: none;
     color: #ffd700; /* Gold */
@@ -67,15 +59,13 @@ header {
     font-size: 20px;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 2.1s ease, transform 0.3s ease;
+    transition: background-color 2.1s ease, transform 0.3s ease; /* 2.1 segundos es muy largo */
 }
-
 .main-nav a:hover {
     background-color: #ffd700; /* Gold */
     color: #000000; /* Black */
     transform: scale(1.1);
 }
-
 .main-nav .logo {
     height: auto;
     width: 100px;
@@ -83,16 +73,13 @@ header {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 .logo:hover{
     transform: scale(1.1);
 }
 
-
 .hamburger-menu {
     display: none;
 }
-
 .close-menu {
     display: none;
 }
@@ -102,14 +89,12 @@ header {
     position: relative;
     text-align: center;
 }
-
 .banner img {
     width: 100%;
     height: auto;
     filter: brightness(21%);
-    height: 80vh;
+    height: 80vh; /* height está definido dos veces */
 }
-
 .banner-content {
     position: absolute;
     top: 50%;
@@ -121,11 +106,9 @@ header {
     padding: 10px;
     box-sizing: border-box;
 }
-
 .banner-text-info {
     padding: 10px;
 }
-
 .banner-text-info h1 {
     font-size: 38px;
     margin: 0px 0;
@@ -135,11 +118,9 @@ header {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 .banner-text-info h1:hover {
     transform: scale(1.1);
 }
-
 .banner-text-info h2 {
     font-size: 29px;
     margin: 0px 0;
@@ -149,11 +130,9 @@ header {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 .banner-text-info h2:hover {
     transform: scale(1.1);
 }
-
 .banner-text-info h3 {
     font-size: 19px;
     margin: 10px 0;
@@ -167,11 +146,9 @@ header {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-
 .banner-text-info h3:hover {
     transform: scale(1.1);
 }
-
 .banner button {
     background-color: #000; /* Black */
     color: #ffd700; /* Gold */
@@ -184,13 +161,11 @@ header {
     margin-top: 25px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .banner button:hover {
     background-color: #ffd700; /* Gold */
     color: #000; /* Black */
     transform: scale(1.1);
 }
-
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +175,6 @@ header {
     width: 80%;
     margin: 0 auto;
 }
-
 
 
 .card {
@@ -214,34 +188,28 @@ header {
     position: relative;
     cursor: pointer;
 }
-
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 .card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
 .card-content {
     padding: 15px;
     text-align: center;
 }
-
 .card-content h2 {
     font-size: 18px;
     margin: 10px 0;
 }
-
 .card-content p {
     font-size: 16px;
     margin-bottom: 10px;
     color: #555;
 }
-
 .add-to-cart {
     display: inline-block;
     background-color: #000; /* Black button */
@@ -253,18 +221,16 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
 .add-to-cart:hover {
     background-color: #333;
     transform: scale(1.1);
 }
-
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 15px;
+    right: 45px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
@@ -273,7 +239,6 @@ header {
     box-shadow: 2px 2px 3px #999;
     z-index: 1000;
 }
-
 .whatsapp-icon {
     margin-top: 16px;
 }
@@ -318,16 +283,17 @@ form textarea {
 /* Botones */
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
 }
 
-button {
+#dialog-button {
     padding: 20px 15px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    width: 100%;
 }
 
 /* Botón de enviar */
@@ -341,17 +307,23 @@ form button[type="submit"]:hover {
     background-color: #333;
 }
 
-/* Botón de cerrar */
-#close-modal {
-    background-color: red;
-    color: white;
-    padding: 10px 15px;
+#open-modal{
+    cursor: pointer;
+}
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    font-size: 40px;
+    color: #ff0000;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-#close-modal:hover {
-    background-color: darkred;
+.close-btn:hover {
+    color: #cc0000;
 }
-
 
 /* Footer Styles */
 footer {
