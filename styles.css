@@ -26,7 +26,7 @@ header {
 
 }
 .info-nav p{
-    transition: transform 2s ease; /* 2 segundos es muy largo para una transición */
+    transition: transform 2s ease; 
 }
 .info-nav p:hover {
     color: #ffffff;

@@ -1,15 +1,19 @@
-body {
-    font-family: 'Roboto', sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
-    background-color: #f4f4f4;
-    color: #333;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text */
+}
+
 .blog-main h2{
     font-weight: bold;
     text-align: center;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 /* Header Styles */
 header {
@@ -33,6 +37,7 @@ header {
 }
 .info-nav p:hover {
     color: #ffffff;
+    transition: color 0.3s ease;
 }
 .info-nav ul {
     list-style: none;
@@ -87,14 +92,6 @@ header {
     display: none;
 }
 
-a {
-    text-decoration: none;
-    color: #FFD700; /* Amarillo */
-}
-
-a:hover {
-    color: #000;
-}
 
 /* Main Container */
 .blog-main {
@@ -199,8 +196,9 @@ a:hover {
 }
 
 .carousel-slide {
-    min-width: 25%;
+    flex: 0 0 25%; /* Ancho fijo */
     padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .carousel-slide img {
@@ -287,6 +285,7 @@ a:hover {
 .about-content h2 {
     margin-top: 0;
     padding: 10px;
+    font-size: 2rem;
 }
 
 .about-content ul {
@@ -300,7 +299,81 @@ a:hover {
     padding: 10px;
     border-radius: 5px;
     color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Contact Form Section */
+dialog {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#dialog-button {
+    padding: 20px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Botón de enviar */
+form button[type="submit"] {
+    background-color: #000;
+    color: #ffd700;
+    padding: 10px 15px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #333;
+}
+
+#open-modal{
+    cursor: pointer;
+}
+/* Close button styles */
+.close-btn {
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    font-size: 40px;
+    color: #ff0000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #cc0000;
+}
+
 /* Footer Styles */
 footer {
     background-color: #000000; /* Black */
@@ -342,15 +415,367 @@ footer hr {
     color: #ffffff; /* White */
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
 
-/* Responsive Design */
+/* 📌 Pantallas menores a 992px */
+@media (max-width: 992px) {
+    /* 🔹 Ocultar info-nav en móviles */
+    .info-nav {
+        display: none;
+    }
+
+    /* 🔹 Mejoras en la barra de navegación */
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    /* 🔹 Logo a la derecha */
+    .main-nav .logo {
+        order: 2; /* Logo a la derecha */
+        margin-right: 0;
+        width: 70px;
+    }
+    .main-nav .logo:hover {
+        transform: scale(1.1);
+    }
+
+    /* 🔹 Menú Hamburguesa */
+    .hamburger-menu {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #ffd700;
+    }
+    .close-menu {
+        font-size: 30px;
+        color: #ffd700;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: none; /* Oculta el botón por defecto */
+    }
+        .nav-links.active .close-menu {
+            display: block;
+        }
+
+    /* 🔹 Menú desplegable */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        width: 70%;
+        padding: 20px;
+        transition: right 0.3s ease;
+        z-index: 1001;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* 🔹 Ocultamos el logo dentro del menú */
+    .nav-links img.logo {
+        display: none;
+    }
+
+    /* 📌 Ajustes en el Footer */
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-sections section {
+        width: 100%;
+        margin: 15px 0;
+    }
+    dialog {
+        width: 85%;
+        max-width: 450px;
+    }
+    .about-container {
+        padding: 15px; /* Reducimos el padding */
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem; /* Tamaño de fuente más pequeño */
+        padding: 8px;
+    }
+
+    .about-content ul li {
+        padding: 8px; /* Reducimos el padding de los ítems */
+        margin: 4px 0; /* Menor separación entre ítems */
+    }
+
+}
+/* 📌 Pantallas menores a 768px */
 @media (max-width: 768px) {
-    .news-grid, .gallery-grid, .promo-container {
+    dialog {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #close-modal {
+        width: 100%;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+    }
+}
+.about-content ul li:hover {
+    transform: translateY(-3px); /* Ligero levantamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+.about-section {
+    margin-bottom: 30px; /* Reducimos el margen inferior */
+}
+
+.about-container {
+    padding: 12px;
+    border-radius: 6px; /* Bordes más suaves */
+}
+
+.about-content h2 {
+    font-size: 1.5rem;
+    padding: 6px;
+}
+
+.about-content ul li {
+    padding: 6px;
+    font-size: 0.95rem; /* Tamaño de fuente más pequeño */
+    border-radius: 4px;
+}
+
+
+/* 📌 Pantallas menores a 576px */
+@media (max-width: 576px) {
+    /* 🔹 Ajustes en la barra de navegación */
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+
+    .hamburger-menu {
+        order: 2; /* Asegura que el menú hamburguesa aparezca a la derecha */
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #ffd700;
+    }
+    .close-menu {
+        font-size: 28px;
+        color: #ffd700;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* 🔹 Ocultar menú normal */
+    .main-nav .nav-links {
+        display: none;
+    }
+
+    /* 🔹 Mostrar menú hamburguesa */
+    .hamburger-menu {
+        display: block;
+    }
+
+}
+dialog {
+    width: 95%;
+    max-width: 380px;
+}
+
+form input,
+form select,
+form textarea {
+    font-size: 14px;
+    padding: 8px;
+}
+
+button {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.about-section {
+    margin-bottom: 20px;
+}
+
+.about-container {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Sombra más ligera */
+}
+
+.about-content h2 {
+    font-size: 1.25rem; /* Más pequeño para móviles */
+    padding: 5px;
+    text-align: center; /* Centrado para mejor estética */
+}
+
+.about-content ul {
+    padding: 0 5px; /* Margen lateral pequeño */
+}
+
+.about-content ul li {
+    padding: 5px;
+    font-size: 0.9rem;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+/* 🔹 Ocultar header en menos de 500px */
+@media (max-width: 500px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #000000; /* Black */
+        color: #ffd700; /* Gold */
+    }
+
+    .hamburger-menu {
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    /* Botón de cierre */
+.close-menu {
+    font-size: 28px;
+    color: #ffd700;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        padding: 50px;
+        z-index: 1001;  
+        align-items: center;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: #ffd700; /* Gold */
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ffffff; /* White */
+    }
+    
+    .news-grid {
         grid-template-columns: 1fr;
     }
-
-    .featured-video iframe {
-        width: 100%;
-        height: auto;
+    .carousel-slide {
+        flex: 0 0 100%; /* Ancho fijo */
     }
+
+    .carousel-slide img {
+        height: 250px; /* Ajusta la altura para pantallas pequeñas */
+
+    }
+}
+/* 📌 Pantallas menores a 375px */
+@media (max-width: 375px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .hamburger-menu {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        padding: 40px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        color: #ffd700; /* Gold */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #ffffff; /* White */
+    }
+        dialog {
+            width: 98%;
+            max-width: 340px;
+            padding: 15px;
+        }
+    
+        form h2 {
+            font-size: 18px;
+        }
+    
+        form input,
+        form select,
+        form textarea {
+            font-size: 13px;
+            padding: 6px;
+        }
+    
+        button {
+            font-size: 14px;
+            padding: 8px;
+        }
+    
+        .buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+}
+.about-container {
+    padding: 8px;
+}
+
+.about-content h2 {
+    font-size: 1.1rem;
+}
+
+.about-content ul li {
+    font-size: 0.85rem;
+    padding: 4px;
+}
+
+/* Mobile Header Structure */
+.mobile-header {
+    display: none;
 }

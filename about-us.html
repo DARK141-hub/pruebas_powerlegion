@@ -1,17 +1,20 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Us - Power Legion Enterprise</title>
         <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
         <link rel="stylesheet" href="styles_aboutus.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
         
         <!-- Facebook Comments Plugin -->
         <script>
@@ -60,13 +63,51 @@
                 <div class="nav-links">
                     <button class="close-menu" id="close-menu">&times;</button>
                     <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
+                    <a href="#about">About Us</a>
                     <img src="imagenes/logo.jpg" class="logo" alt="Logo">
-                    <a href="javascript:void(0);" onclick="scrollToServices()">Services</a>
+                    <a href="#latest-news">Costumers</a>
                     <a id="open-modal" class="open-modal-btn">Contact</a>
                 </div>
             </nav>
         </header>
+
+        <!-- Modal con el formulario -->
+    <dialog id="modal-form">
+        <form id="contact-form" method="dialog">
+            <span class="close-btn" onclick="document.getElementById('modal-form').close()">&times;</span>
+            <h2 class="contact-title">Contact Us</h2>
+
+            <label for="nombre">Name:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Insert your name">
+
+            <label for="telefono">Phone Number:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Insert your phone number">
+
+            <label for="email">Mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Insert your email">
+
+            <label for="servicio">Service:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Select a service</option>
+                <option value="Weatherproof Inlets">Weatherproof Inlets</option>
+                <option value="Soft Starters Devices">Soft Starters Devices</option>
+                <option value="Hard Start Devices">Hard Start Devices</option>
+                <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
+                <option value="Interior Remodeling">Interior Remodeling</option>
+                <option value="Concrete Services">Concrete Services</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="mensaje">Additional Message (optional):</label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+
+            <div class="buttons">
+                <button id="dialog-button" type="submit" id="submit">Send</button>
+                <p id="respuesta"></p>
+            </div>
+        </form>
+    </dialog>
+
 
         <main class="blog-main">
             <!-- Featured Content Section -->
@@ -253,6 +294,6 @@
                 once: true
             });
         </script>
-<script src="AboutUsJS.js"></script>
+<script type="module" src="AboutUsJS.js"></script>
     </body>
 </html>
