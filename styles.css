@@ -77,6 +77,13 @@ header {
     transform: scale(1.1);
 }
 
+.slogan {
+    font-size: 20px;
+    font-style: italic;
+    color: #ffd700; /* Gold */
+    margin-right: 10px;
+}
+
 .hamburger-menu {
     display: none;
 }
