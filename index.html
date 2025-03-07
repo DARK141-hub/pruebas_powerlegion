@@ -41,12 +41,15 @@
         <hr>
 
         <nav class="main-nav">
+            <div class="loco-container">
+                <img src="imagenes/logo.jpg" class="logo" alt="Electrician logo">
+                <h1 class="slogan">Power Legion Enterprise</h1>
+            </div>
             <button class="hamburger-menu">&#9776;</button>
             <div class="nav-links">
                 <button class="close-menu" id="close-menu">&times;</button>
                 <a href="index.html">Home</a>
                 <a href="about-us.html">About Us</a>
-                <img src="imagenes/logo.jpg" class="logo" alt="Electrician logo">
                 <a href="#servicios" onclick="event.preventDefault(); 
                 document.getElementById('servicios').scrollIntoView({behavior: 'smooth', block: 'center'});
                  setTimeout(() => window.scrollBy(0, 60), 800);">Services</a>
@@ -81,7 +84,6 @@
             <img src="imagenes/weatherproof.jpg" alt="Weatherproof Inlets" class="card-image">
             <div class="card-content">
                 <h2>Weatherproof Inlets</h2>
-                <h1>ola</h1>
                 <p>Safe, weatherproof power for RVs, boats, and generators—plug in with confidence!</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Weatherproof Inlets';">Contact us</button>
             </div>
