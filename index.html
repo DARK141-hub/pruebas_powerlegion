@@ -41,9 +41,9 @@
         <hr>
 
         <nav class="main-nav">
-            <div class="loco-container">
+            <div class="logo-container">
                 <img src="imagenes/logo.jpg" class="logo" alt="Electrician logo">
-                <h1 class="slogan">Power Legion Enterprise</h1>
+                <span class="slogan">Power Legion Enterprise</span>
             </div>
             <button class="hamburger-menu">&#9776;</button>
             <div class="nav-links">
@@ -99,8 +99,8 @@
         <div class="card">
             <img src="imagenes/hard-start1.jpg" alt="Hard Start Devices" class="card-image">
             <div class="card-content">
-                <h2>Hard Start Devices</h2>
-                <p>Descripción</p>
+                <h2>Installation of generac 22kw, 24kw, 26kw, prepare for a blackout</h2>
+                <p>Automatic operation with transfer switch.</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Hard Start Devices';">Contact us</button>
             </div>
         </div>
@@ -130,6 +130,24 @@
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Concrete Services';">Contact us</button>
             </div>
         </div>
+        <div class="card">
+            <img src="imagenes/concreto.jpg" alt="Concrete Services" class="card-image">
+            <div class="card-content">
+                <h2>Complete services to connect the city light</h2>
+                <p>We make concrete for your backyard. For the foundation
+                    of your house or for your driveway.</p>
+                <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Concrete Services';">Contact us</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagenes/concreto.jpg" alt="Concrete Services" class="card-image">
+            <div class="card-content">
+                <h2>Update your breaker box to save electricity.</h2>
+                <p>We make concrete for your backyard. For the foundation
+                    of your house or for your driveway.</p>
+                <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Concrete Services';">Contact us</button>
+            </div>
+        </div>
     </section>
 
     <!-- Modal con el formulario -->
@@ -147,6 +165,9 @@
             <label for="email">Mail:</label>
             <input type="email" id="email" name="email" required placeholder="Insert your email">
 
+            <label for="date">Preferred Date and Time for Call:</label>
+            <input type="datetime-local" id="date" name="date">
+
             <label for="servicio">Service:</label>
             <select id="servicio" name="servicio" required>
                 <option value="">Select a service</option>
@@ -156,6 +177,8 @@
                 <option value="Natural Gas Hook-up">Natural Gas Hook-up</option>
                 <option value="Interior Remodeling">Interior Remodeling</option>
                 <option value="Concrete Services">Concrete Services</option>
+                <option value="Complete services to connect the city light">Complete services to connect the city light</option>
+                <option value="Update your breaker box to save electricity">Update your breaker box to save electricity</option>
                 <option value="Other">Other</option>
             </select>
 
@@ -180,38 +203,43 @@
             <section class="footer-info">
                 <h2>Information</h2>
                 <hr>
-                <p>Power Legion Enterprise, delivering excellence since [year].</p>
+                <p>Houston, TX. <br>
+                    Phone: (832)722-7912 <br>
+                    Phone: (281)300-4219 <br>
+                    Monday - Sunday <br>
+                    9:00am - 8:00pm
+                </p>
             </section>
             
             <section class="footer-links">
                 <h2>Quick Links</h2>
                 <hr>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
                     <li><a href="about-us.html">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="mailto:alanochoa024@gmail.com?subject=Hi%20I%20came%20from%20the%20website">Contact to alanochoa024@gmail.com</a></li>
                 </ul>
             </section>
             
             <section class="footer-services">
-                <h2>Our Services</h2>
+                <h2>Follow Us</h2>
                 <hr>
                 <ul>
-                    <li><a href="#">Weatherproof Inlets</a></li>
-                    <li><a href="#">Soft Starters Devices</a></li>
-                    <li><a href="#">Hard Start Devices</a></li>
-                    <li><a href="#">Natural Gas Hook-up</a></li>
-                    <li><a href="#">Lawn Bed Maintenance</a></li>
-                    <li><a href="#">Spring Maintenance</a></li>
+                    <ul class="social-links"></ul>
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                </ul>
                 </ul>
             </section>
             
             <section class="footer-support">
-                <h2>Support</h2>
+                <h2>Web Development Credits</h2>
                 <hr>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">to Alan Morelos</a></li>
                 </ul>
             </section>
         </div>

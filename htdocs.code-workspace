@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "invitacion",
+			"path": "../../../invitacion"
+		},
+		{
+			"path": "../../../wamp64/www/Mipagina"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "htdocs"
+	}
+}

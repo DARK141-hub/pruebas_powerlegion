@@ -59,12 +59,15 @@
             <hr>
     
             <nav class="main-nav">
+                <div class="logo-container">
+                    <img src="imagenes/logo.jpg" class="logo" alt="Electrician logo">
+                    <span class="slogan">Power Legion Enterprise</span>
+                </div>
                 <button class="hamburger-menu">&#9776;</button>
                 <div class="nav-links">
                     <button class="close-menu" id="close-menu">&times;</button>
                     <a href="index.html">Home</a>
                     <a href="#about">About Us</a>
-                    <img src="imagenes/logo.jpg" class="logo" alt="Logo">
                     <a href="#latest-news">Costumers</a>
                     <a id="open-modal" class="open-modal-btn">Contact</a>
                 </div>
@@ -85,6 +88,9 @@
 
             <label for="email">Mail:</label>
             <input type="email" id="email" name="email" required placeholder="Insert your email">
+
+            <label for="date">Preferred Date and Time for Call:</label>
+            <input type="datetime-local" id="date" name="date">
 
             <label for="servicio">Service:</label>
             <select id="servicio" name="servicio" required>
@@ -246,47 +252,52 @@
         </main>
 
           <!-- Pie de página -->
-    <footer data-aos="fade-up" data-aos-duration="1500">
-        <div class="footer-sections">
-            <section class="footer-info">
-                <h2>Information</h2>
-                <hr>
-                <p>Power Legion Enterprise, delivering excellence since [year].</p>
-            </section>
-            
-            <section class="footer-links">
-                <h2>Quick Links</h2>
-                <hr>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="about-us.html">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </section>
-            
-            <section class="footer-services">
-                <h2>Our Services</h2>
-                <hr>
-                <ul>
-                    <li><a href="#">Weatherproof Inlets</a></li>
-                    <li><a href="#">Soft Starters Devices</a></li>
-                    <li><a href="#">Hard Start Devices</a></li>
-                    <li><a href="#">Natural Gas Hook-up</a></li>
-                    <li><a href="#">Lawn Bed Maintenance</a></li>
-                    <li><a href="#">Spring Maintenance</a></li>
-                </ul>
-            </section>
-            
-            <section class="footer-support">
-                <h2>Support</h2>
-                <hr>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </section>
-        </div>
-    </footer>
+          <footer data-aos="fade-up" data-aos-duration="1500">
+            <div class="footer-sections">
+                <section class="footer-info">
+                    <h2>Information</h2>
+                    <hr>
+                    <p>Houston, TX. <br>
+                        Phone: (832)722-7912 <br>
+                        Phone: (281)300-4219 <br>
+                        Monday - Sunday <br>
+                        9:00am - 8:00pm
+                    </p>
+                </section>
+                
+                <section class="footer-links">
+                    <h2>Quick Links</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="about-us.html">Blog</a></li>
+                        <li><a href="mailto:alanochoa024@gmail.com?subject=Hi%20I%20came%20from%20the%20website">Contact to alanochoa024@gmail.com</a></li>
+                    </ul>
+                </section>
+                
+                <section class="footer-services">
+                    <h2>Follow Us</h2>
+                    <hr>
+                    <ul>
+                        <ul class="social-links"></ul>
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    </ul>
+                    </ul>
+                </section>
+                
+                <section class="footer-support">
+                    <h2>Web Development Credits</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">to Alan Morelos</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
 
         <script>
             AOS.init({

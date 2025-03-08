@@ -23,6 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
         });
 
+                // Cerrar menú al hacer clic en un enlace dentro del menú
+                navLinks.addEventListener('click', function (event) {
+                    if (event.target.tagName === 'A') { // Verifica si el clic fue en un enlace
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                        infoNav.classList.remove('active');
+                        document.body.style.overflow = 'auto'; // Restaura el scroll
+                    }
+                });
+        
         // Cerrar menú al hacer clic fuera
         document.addEventListener('click', function (event) {
             if (!event.target.closest('.main-nav') && !event.target.closest('.info-nav')) {
@@ -98,9 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
         let email = document.querySelector("#email").value.trim();
         let servicio = document.querySelector("#servicio").value;
         let mensajeAdicional = document.querySelector("#mensaje").value.trim();
+        let fechaHora = document.querySelector("#date").value; // Obtener el valor de la fecha y hora
 
         // 📌 Verificar campos vacíos
-        if (!nombre || !numeroTelefono || !email || !servicio) {
+        if (!nombre || !numeroTelefono || !email || !servicio || !fechaHora) {
             respuesta.classList.add("fail");
             respuesta.textContent = `Faltan algunos datos, ${nombre ? nombre : 'Usuario'}`;
             return false;
@@ -119,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         *Número de Teléfono:* ${numeroTelefono}%0A
         *Correo Electrónico:* ${email}%0A
         *Servicio Solicitado:* ${servicio}%0A
+        *Fecha y Hora Preferida para Llamada:* ${fechaHora}%0A
         *Mensaje Adicional:* ${mensajeAdicional}%0A`;
 
         setTimeout(() => {
