@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById("modal-form");
     const openModal = document.getElementById("open-modal");
     const closeModal = document.getElementById("close-modal");
-    const form = document.querySelector("#contact-form");  // 📌 Usamos el formulario en lugar de solo el botón
+    const form = document.querySelector("#contact-form");
     const respuesta = document.querySelector("#respuesta");
 
     // Verificar si los elementos existen antes de agregar eventos
