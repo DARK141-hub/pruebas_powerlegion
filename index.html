@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
+    <link rel="icon" type="image/x-icon" href="imagenes/icon.ico">
 </head>
 <body>
     <!-- Encabezado principal -->
@@ -23,18 +23,17 @@
         <nav class="info-nav">
             <p><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
             <ul>
-                <li><p><i class="fa-solid fa-phone"></i> (832)722-7912</p></li>
-                <li><p><i class="fa-solid fa-phone"></i> (281)300-4219</p></li>
+                <li><p><i class="fa-solid fa-phone"></i> (956) 590-6594 (Calls in Spanish only)</p></li>
+                <li><p><i class="fa-brands fa-whatsapp"></i> (281) 697-0051 (WhatsApp support in English)</p></li>
             </ul>
             <ul>
                 <li><p><i class="fa-solid fa-calendar-days"></i> Monday - Sunday</p></li>
                 <li><p><i class="fa-solid fa-clock"></i> 9:00am - 8:00pm </p></li>
             </ul>
             <ul>
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://x.com/"><i class="fab fa-x"></i></a></li>
-                <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61566590362527&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/@eduardoogarciaa23?_t=ZT-8udOPNOAsmY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://www.youtube.com/@PowerLegionEnterprise" target="_blank"><i class="fab fa-youtube"></i></a></li>
             </ul>
         </nav>
 
@@ -134,8 +133,8 @@
             <img src="imagenes/city-light.webp" alt="light city" class="card-image">
             <div class="card-content">
                 <h2>Complete services to connect the city light</h2>
-                <p>We make concrete for your backyard. For the foundation
-                    of your house or for your driveway.</p>
+                <p>We provide comprehensive services to connect your property to the city light grid,
+                     ensuring reliable and efficient power supply.</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Complete services to connect the city light';">Contact us</button>
             </div>
         </div>
@@ -143,9 +142,16 @@
             <img src="imagenes/update-breaker-box.webp" alt="breaker box" class="card-image" style="object-position: center 15%;">
             <div class="card-content">
                 <h2>Update your breaker box to save electricity.</h2>
-                <p>We make concrete for your backyard. For the foundation
-                    of your house or for your driveway.</p>
+                <p>Upgrade your electrical panel to enhance safety, efficiency, and accommodate modern electrical demands.</p>
                 <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Update your breaker box to save electricity';">Contact us</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagenes/complete-electrical-services.webp" alt="breaker box" class="card-image" style="object-position: center 15%;">
+            <div class="card-content">
+                <h2>Complete electrical services</h2>
+                <p>for Apartments (residential & commercial)</p>
+                <button class="add-to-cart" onclick="document.getElementById('modal-form').showModal(); document.getElementById('servicio').value='Electric services';">Contact us</button>
             </div>
         </div>
     </section>
@@ -179,6 +185,7 @@
                 <option value="Concrete Services">Concrete Services</option>
                 <option value="Complete services to connect the city light">Complete services to connect the city light</option>
                 <option value="Update your breaker box to save electricity">Update your breaker box to save electricity</option>
+                <option value="Electric services">Complete Electrical Services for Apartments</option>
                 <option value="Other">Other</option>
             </select>
 
@@ -190,6 +197,41 @@
                 <p id="respuesta"></p>
             </div>
         </form>
+    </dialog>
+
+    
+    <!-- Carpentry Services Section -->
+    <section id="carpentry-services" class="carpentry-section" data-aos="fade-up" data-aos-duration="1500">
+        <h2>Carpentry Services</h2>
+        <div class="carpentry-container">
+            <div class="carpentry-card">
+                <img src="imagenes/carpinteria/carpinteria_portada.webp" alt="Carpentry Services" class="carpentry-card-image">
+                <div class="carpentry-card-content">
+                    <h2>Custom Carpentry</h2>
+                    <p>High-quality custom carpentry services tailored to your needs.</p>
+                    <button class="carpentry-view-gallery" onclick="document.getElementById('carpentry-modal').showModal();">View Gallery</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carpentry Gallery Modal -->
+    <dialog id="carpentry-modal" aria-labelledby="carpentry-modal-title" aria-describedby="carpentry-modal-description">
+        <span class="carpentry-close-btn" onclick="document.getElementById('carpentry-modal').close()" aria-label="Close">&times;</span>
+        <h2 id="carpentry-modal-title">Carpentry Projects Gallery</h2>
+        <div class="carpentry-gallery">
+            <img src="imagenes/carpinteria/carpinteria1.webp" alt="Custom Carpentry Project 1 - Elegant Wooden Furniture">
+            <img src="imagenes/carpinteria/carpinteria2.webp" alt="Custom Carpentry Project 2 - Modern Wooden Cabinet">
+            <img src="imagenes/carpinteria/carpinteria3.webp" alt="Custom Carpentry Project 3 - Stylish Wooden Table">
+            <img src="imagenes/carpinteria/carpinteria4.webp" alt="Custom Carpentry Project 4 - Wooden Shelving Unit">
+            <img src="imagenes/carpinteria/carpinteria5.webp" alt="Custom Carpentry Project 5 - Handcrafted Wooden Chair">
+            <img src="imagenes/carpinteria/carpinteria6.webp" alt="Custom Carpentry Project 6 - Rustic Wooden Bench">
+            <img src="imagenes/carpinteria/carpinteria7.webp" alt="Custom Carpentry Project 7 - Wooden Door Design">
+            <img src="imagenes/carpinteria/carpinteria8.webp" alt="Custom Carpentry Project 8 - Wooden Wall Paneling">
+            <img src="imagenes/carpinteria/carpinteria9.webp" alt="Custom Carpentry Project 9 - Wooden Bed Frame">
+            <img src="imagenes/carpinteria/carpinteria10.webp" alt="Custom Carpentry Project 10 - Wooden Staircase">
+            <img src="imagenes/carpinteria/carpinteria11.webp" alt="Custom Carpentry Project 11 - Wooden Desk">
+        </div>
     </dialog>
 
     <!-- Botón flotante de WhatsApp -->
@@ -204,8 +246,8 @@
                 <h2>Information</h2>
                 <hr>
                 <p>Houston, TX. <br>
-                    Phone: (832)722-7912 <br>
-                    Phone: (281)300-4219 <br>
+                    Phone: (956) 590-6594 (Calls in Spanish only)<br>
+                    Phone: (281) 697-0051 (WhatsApp support in English) <br>
                     Monday - Sunday <br>
                     9:00am - 8:00pm
                 </p>
@@ -218,6 +260,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-us.html">About</a></li>
                     <li><a href="mailto:alanochoa024@gmail.com?subject=Hi%20I%20came%20from%20the%20website">Contact to alanochoa024@gmail.com</a></li>
+                    <li><a href="mailto:powerLegionEnterprise@outlook.com?subject=Hi%20I%20came%20from%20the%20website">Contact to powerLegionEnterprise@outlook.com</a></li>
+
                 </ul>
             </section>
             
@@ -226,10 +270,9 @@
                 <hr>
                 <ul>
                     <ul class="social-links"></ul>
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61566590362527&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@eduardoogarciaa23?_t=ZT-8udOPNOAsmY&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@PowerLegionEnterprise" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
                 </ul>
                 </ul>
             </section>
@@ -243,9 +286,11 @@
             </section>
         </div>
     </footer>
+
     <script>
         AOS.init();
     </script>    
     <script type="module" src="app.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +12,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="icon" type="image/x-icon" href="/Power_Legion_Enterprise/imagenes/logo-icon.ico">
-        
+        <link rel="icon" type="image/x-icon" href="imagenes/icon.ico">        
         <!-- Facebook Comments Plugin -->
         <script>
             window.fbAsyncInit = function() {
@@ -31,6 +30,7 @@
               if (d.getElementById(id)) return;
               js = d.createElement(s); js.id = id;
               js.src = "https://connect.facebook.net/es_LA/sdk.js";
+              js.async = true;
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
           </script>
@@ -41,18 +41,17 @@
             <nav class="info-nav">
                 <p><i class="fa-solid fa-location-dot"></i> Houston, TX</p>
                 <ul>
-                    <li><p><i class="fa-solid fa-phone"></i> (832)722-7912</p></li>
-                    <li><p><i class="fa-solid fa-phone"></i> (281)300-4219</p></li>
+                    <li><p><i class="fa-solid fa-phone"></i> (956) 590-6594 (Calls in Spanish only)</p></li>
+                    <li><p><i class="fa-brands fa-whatsapp"></i> (281) 697-0051 (WhatsApp support in English)</p></li>
                 </ul>
                 <ul>
                     <li><p><i class="fa-solid fa-calendar-days"></i> Monday - Sunday</p></li>
                     <li><p><i class="fa-solid fa-clock"></i> 9:00am - 8:00pm </p></li>
                 </ul>
                 <ul>
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://x.com/"><i class="fab fa-x"></i></a></li>
-                    <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61566590362527&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.tiktok.com/@eduardoogarciaa23?_t=ZT-8udOPNOAsmY&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="https://www.youtube.com/@PowerLegionEnterprise" target="_blank"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </nav>
     
@@ -103,6 +102,7 @@
                 <option value="Concrete Services">Concrete Services</option>
                 <option value="Complete services to connect the city light">Complete services to connect the city light</option>
                 <option value="Update your breaker box to save electricity">Update your breaker box to save electricity</option>
+                <option value="Electric services">Complete Electrical Services for Apartments</option>
                 <option value="Other">Other</option>
             </select>
 
@@ -122,7 +122,7 @@
             <section id="featured" class="featured-section">
                 <h2 class="section-title">Featured Content</h2>
                 <div class="featured-video">
-                    <iframe width="860" height="515" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+                    <lite-youtube videoid="5brAX7EfbJE"></lite-youtube>
                 </div>
             </section>
 
@@ -132,28 +132,28 @@
     <div class="carousel-container">
         <div class="carousel-track">
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/cableado.webp" alt="Work 1">
+                <img src="imagenes/cableado.webp" alt="Work 1" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/BuildWorking.webp" alt="Work 2">
+                <img src="imagenes/BuildWorking.webp" alt="Work 2" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/TvInterior.webp" alt="Work 3">
+                <img src="imagenes/TvInterior.webp" alt="Work 3" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/WorkingOn2.webp" alt="Work 4">
+                <img src="imagenes/WorkingOn2.webp" alt="Work 4" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/interioresdesing.webp" alt="Work 5">
+                <img src="imagenes/interioresdesing.webp" alt="Work 5" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/Volt.webp" alt="Work 6">
+                <img src="imagenes/Volt.webp" alt="Work 6" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/weatherproof.webp" alt="Work 7">
+                <img src="imagenes/complete-electrical-services-gallery.webp" alt="Work 7" loading="lazy">
             </div>
             <div class="carousel-slide" data-aos="fade-up">
-                <img src="imagenes/Generator1.webp" alt="Work 8">
+                <img src="imagenes/Generator1.webp" alt="Work 8" loading="lazy">
             </div>
         </div>
         <button class="carousel-button prev">&lt;</button>
@@ -250,7 +250,7 @@
                         data-href="https://www.facebook.com/darkart141" 
                         data-width="100%" 
                         data-numposts="5">
-                   </div>
+                        </div>
         </main>
 
           <!-- Pie de página -->
@@ -260,8 +260,8 @@
                     <h2>Information</h2>
                     <hr>
                     <p>Houston, TX. <br>
-                        Phone: (832)722-7912 <br>
-                        Phone: (281)300-4219 <br>
+                        Phone: (956) 590-6594 (Calls in Spanish only)<br>
+                        Phone: (281) 697-0051 (WhatsApp support in English) <br>
                         Monday - Sunday <br>
                         9:00am - 8:00pm
                     </p>
@@ -274,6 +274,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About</a></li>
                         <li><a href="mailto:alanochoa024@gmail.com?subject=Hi%20I%20came%20from%20the%20website">Contact to alanochoa024@gmail.com</a></li>
+                        <li><a href="mailto:powerLegionEnterprise@outlook.com?subject=Hi%20I%20came%20from%20the%20website">Contact to powerLegionEnterprise@outlook.com</a></li>
                     </ul>
                 </section>
                 
@@ -282,10 +283,9 @@
                     <hr>
                     <ul>
                         <ul class="social-links"></ul>
-                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i> YouTube</a></li>
-                        <li><a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61566590362527&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@eduardoogarciaa23?_t=ZT-8udOPNOAsmY&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+                        <li><a href="https://www.youtube.com/@PowerLegionEnterprise" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
                     </ul>
                     </ul>
                 </section>

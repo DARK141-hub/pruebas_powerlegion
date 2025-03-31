@@ -149,3 +149,48 @@ document.addEventListener('DOMContentLoaded', function () {
         whatsappBtn.setAttribute("href", url);
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality - Selectores actualizados
+    const galleryButtons = document.querySelectorAll('.carpentry-view-gallery');
+    const closeButtons = document.querySelectorAll('.carpentry-close-btn');
+    const modals = document.querySelectorAll('dialog[id$="-modal"]'); // Selecciona todos los modales que terminan con "-modal"
+    
+    // Abrir modal al hacer clic en el botón de galería
+    galleryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal') || 'carpentry-modal'; // Usa data-modal o el ID por defecto
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+                document.body.classList.add('no-scroll'); // Bloquear scroll
+            }
+        });
+    });
+    
+    // Cerrar modal al hacer clic en el botón de cerrar
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('dialog');
+            if (modal) {
+                modal.close();
+                document.body.classList.remove('no-scroll'); // Restaurar scroll
+            }
+        });
+    });
+    
+    // Cerrar modal al hacer clic fuera de él
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            const dialogDimensions = this.getBoundingClientRect();
+            if (
+                e.clientX < dialogDimensions.left ||
+                e.clientX > dialogDimensions.right ||
+                e.clientY < dialogDimensions.top ||
+                e.clientY > dialogDimensions.bottom
+            ) {
+                this.close();
+                document.body.classList.remove('no-scroll'); // Restaurar scroll
+            }
+        });
+    });
+});
