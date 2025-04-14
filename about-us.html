@@ -66,8 +66,8 @@
                 <div class="nav-links">
                     <button class="close-menu" id="close-menu">&times;</button>
                     <a href="index.html">Home</a>
-                    <a href="#about">About Us</a>
-                    <a href="#latest-news">Costumers</a>
+                    <a href="#about" onclick="event.preventDefault(); document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });">About Us</a>
+                    <a href="#latest-news" onclick="event.preventDefault(); document.querySelector('#latest-news').scrollIntoView({ behavior: 'smooth' });">Costumers</a>
                     <a id="open-modal" class="open-modal-btn">Contact</a>
                 </div>
             </nav>
@@ -122,7 +122,7 @@
             <section id="featured" class="featured-section">
                 <h2 class="section-title">Featured Content</h2>
                 <div class="featured-video">
-                    <lite-youtube videoid="5brAX7EfbJE"></lite-youtube>
+                    <lite-youtube videoid="VwgndnTEZ_k"></lite-youtube>
                 </div>
             </section>
 
@@ -243,6 +243,7 @@
                             <li>Competitive Pricing</li>
                         </ul>
                     </div>
+                    <img class="about-image" src="imagenes/about-us_1.webp" alt="Worker Team">
                 </div>
             </section>
                         <!-- Comments section -->
