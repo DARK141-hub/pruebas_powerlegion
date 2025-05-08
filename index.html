@@ -234,6 +234,51 @@
         </div>
     </dialog>
 
+    <!-- Job Application Section -->
+    <section id="job-application-banner" class="job-banner" data-aos="fade-up" data-aos-duration="1500">
+        <div class="job-banner-content">
+            <img src="imagenes/banner1.webp" alt="">
+            <h2>Join Our Team</h2>
+            <p>We are hiring! Explore exciting opportunities in our growing company.</p>
+            <button class="apply-button" onclick="document.getElementById('job-modal').showModal();">Apply Now</button>
+        </div>
+    </section>
+
+<!-- Job Application Modal (Fixed) -->
+<dialog id="job-modal">
+    <form id="job-application-form" method="POST" enctype="multipart/form-data" onsubmit="event.preventDefault(); handleJobApplication();">
+        <span class="close-btn" onclick="document.getElementById('job-modal').close()">&times;</span>
+        <h2>Job Application</h2>
+
+        <label for="applicant-name">Name:</label>
+        <input type="text" id="applicant-name" name="applicant-name" required placeholder="Insert your name">
+
+        <label for="applicant-phone">Phone Number:</label>
+        <input type="tel" id="applicant-phone" name="applicant-phone" required placeholder="Insert your phone number">
+
+        <label for="applicant-email">Email:</label>
+        <input type="email" id="applicant-email" name="applicant-email" required placeholder="Insert your email">
+
+        <label for="job-position">Position:</label>
+        <select id="job-position" name="job-position" required>
+            <option value="">Select a position</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Remodeling">Remodeling</option>
+            <option value="Handyman">Handyman</option>
+            <option value="Electrician Assistant">Electrician Assistant</option>
+        </select>
+
+        <label for="applicant-message">Additional Message (optional):</label>
+        <textarea name="applicant-message" id="applicant-message" cols="30" rows="5" placeholder="Tell us about yourself"></textarea>
+
+        <div class="buttons">
+            <button type="submit" id="job-submit">Submit Application</button>
+            <p id="job-response"></p>
+        </div>
+    </form>
+</dialog>
+
+
     <!-- Botón flotante de WhatsApp -->
     <a id="whatsapp-float" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp whatsapp-icon"></i>
@@ -291,6 +336,5 @@
         AOS.init();
     </script>    
     <script type="module" src="app.js"></script>
-
 </body>
 </html>
