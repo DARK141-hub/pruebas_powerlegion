@@ -234,15 +234,21 @@
         </div>
     </dialog>
 
-    <!-- Job Application Section -->
-    <section id="job-application-banner" class="job-banner" data-aos="fade-up" data-aos-duration="1500">
-        <div class="job-banner-content">
-            <img src="imagenes/banner1.webp" alt="">
-            <h2>Join Our Team</h2>
-            <p>We are hiring! Explore exciting opportunities in our growing company.</p>
-            <button class="apply-button" onclick="document.getElementById('job-modal').showModal();">Apply Now</button>
+<!-- Job Application Section -->
+<section id="job-application-banner" class="job-section" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Join Our Team</h2>
+    <div class="job-container">
+        <div class="job-card">
+            <img src="imagenes/job_finding.webp" alt="We are hiring" class="job-card-image">
+            <div class="job-card-content">
+                <h3>We Are Hiring!</h3>
+                <p>Explore exciting opportunities in our growing company and be part of something big.</p>
+                <button class="job-apply-button" onclick="document.getElementById('job-modal').showModal();">Apply Now</button>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
 <!-- Job Application Modal (Fixed) -->
 <dialog id="job-modal">
